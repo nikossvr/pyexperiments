@@ -26,3 +26,12 @@ def frdparse(file):
 
     return item_list
 
+def valuetoindex(a_list,a_value):
+    smallest_diff = abs(a_list[0]-a_value)
+
+    for i in range(len(a_list)):
+        diff = abs(a_value-a_list[i])
+        if diff<smallest_diff:
+            smallest_diff = diff
+            index = i
+    return index
